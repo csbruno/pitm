@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <css.bruno.phoneinthemiddle.InputView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+        <!--<ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/open_circle"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="12dp"-->
+        <!--android:layout_height="12dp"-->
+        <!--android:src="@drawable/circle"-->
+        <!--android:layout_gravity="center"/>-->
+
+    </FrameLayout>
+
+</FrameLayout>
