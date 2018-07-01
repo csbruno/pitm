@@ -12,45 +12,21 @@ import java.util.Map;
 
 public class UDPClient {
 
-    DatagramSocket datagramSocket;
-    private int port;
-    private byte[] ipAddress;
-
-    public UDPClient(byte[] ipAddr, int port) {
-        this.port = port;
-        this.ipAddress = ipAddr;
-        openComm();
-
-    }
-
-    private boolean openComm() {
-        if (datagramSocket != null && datagramSocket.isClosed()) {
-            try {
-
-                return true;
-            } catch (Exception e) {
-                return false;
-            }
-        } else {
-            return true;
-        }
-
-    }
-
-    public void SendJSON(final Map<String, String> hashMap) {
+    public static void SendJSON(final byte[] ipAddr, final int port, final Map<String, String> hashMap) {
 
         final String msg = (new JSONObject(hashMap).toString());
 
         AsyncTask<Void, Void, Void> async_cient;
 
         async_cient = new AsyncTask<Void, Void, Void>() {
+            DatagramSocket datagramSocket;
             @Override
             protected Void doInBackground(Void... params) {
 
                 try {
-                    if (datagramSocket == null) datagramSocket = new DatagramSocket(port);
+                   datagramSocket = new DatagramSocket(port);
 
-                    InetAddress addr = InetAddress.getByAddress(ipAddress);
+                    InetAddress addr = InetAddress.getByAddress(ipAddr);
 
                     DatagramPacket dp;
                     dp = new DatagramPacket(msg.getBytes(), msg.getBytes().length, addr, port);

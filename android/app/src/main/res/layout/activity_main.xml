@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <css.bruno.phoneinthemiddle.InputView
-        android:id="@+id/main"
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingEditTextIP"
+        android:orientation="vertical">
 
-    <FrameLayout
-        android:layout_width="40dp"
-        android:layout_height="40dp">
-        <!--<ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/open_circle"/>-->
-        <!--<ImageView-->
-        <!--android:layout_width="12dp"-->
-        <!--android:layout_height="12dp"-->
-        <!--android:src="@drawable/circle"-->
-        <!--android:layout_gravity="center"/>-->
+        <EditText
+            android:id="@+id/editTextIP"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:textColor="@color/colorAccent"
+            android:inputType="number"
+            android:focusable="true" />
 
-    </FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:text="@string/start" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/stop" />
+        </LinearLayout>
+        <css.bruno.phoneinthemiddle.InputView
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
 </FrameLayout>

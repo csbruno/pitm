@@ -97,7 +97,7 @@ def setItems(data):
                 device.data.wSlider = int(value)
             elif(int(key) == LEFT_TRIGGER_AXIS):
                 device.data.wDial = int(value)
-    device.data.lButtons = getlButton(listButtons)
+    device.data.lButtons = getlButtons(listButtons)
     device.update()
      
             
