@@ -3,11 +3,11 @@ This project connects your Bluetooth controller to your pc using your phone's bl
 
 BT Controlle  ---bluetooth---> Phone ----router---> Computer
 
-Requirements:
--Bluetooth Controller connected to the phone
--Computer/Phone connected to the same router
--Python 3
--vJoy
--xBox360ce
+<b>Requirements<b>: <br>
+-- Bluetooth Controller connected to the phone <br>
+-- Computer/Phone connected to the same router <br>
+-- <a href="https://www.python.org/downloads/">Python 3.7</a> <br>
+-- <a href="http://vjoystick.sourceforge.net/site/index.php/download-a-install/download">vJoy</a> <br>
+-- <a href="https://www.x360ce.com/">xBox360ce</a>
 
 
